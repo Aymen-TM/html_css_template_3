@@ -1,0 +1,138 @@
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #2196f3;
+    --main-color-alt: #1787e0;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+    --section-background: #ececec;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* navigation bar (header) */
+header {
+    box-shadow: 0 0 10px #ddd;
+}
+
+header .container .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+    font-size: 26px;
+    font-weight: bold;
+    height: 50px;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navigation li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    height: 40px;
+    color: black;
+}
+
+@media (min-width:768px) {
+    header .container {
+        flex-direction: row;
+    }
+
+    .navigation li a {
+        height: 72px;
+        position: relative;
+        padding: 0 30px;
+        overflow: hidden;
+        font-size: 18px;
+        transition: var(--main-transition);
+    }
+
+    .navigation li a:hover{
+        color: var(--main-color);
+        background-color: var(--section-background);
+    }
+
+    .navigation li a::after {
+        position: absolute;
+        content: " ";
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 4px;
+        background-color: var(--main-color);
+        transition: var(--main-transition);
+    }
+
+    .navigation li a:hover::after {
+        width: 100%;
+    }
+}
+
+/* navigation bar (header) */
