@@ -63,6 +63,7 @@ ul {
 
 /* navigation bar (header) */
 header {
+    background-color: white;
     box-shadow: 0 0 10px #ddd;
 }
 
@@ -201,3 +202,103 @@ header .navigation .mega-menu .image {
 
 
 /* navigation bar (header) */
+
+
+/* landing section start */
+.landing{
+    height: calc(100vh - 72px);
+    max-width: 100%;
+    position: relative;
+}
+.landing::before{
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: -40px;
+    background-color: var(--section-background);
+    transform-origin: top left;
+    z-index: -2;
+    transform: skewY(-6deg);
+}
+.landing .container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 120px;
+}
+.landing .text p{
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 5px 0 0;
+    color: #666;
+    max-width: 500px;
+}
+.landing .text h1{
+    font-size: 28px;
+    letter-spacing: -2px;
+    margin: 0;
+
+}
+.landing .image{
+    display: none;
+}
+
+
+@media (min-width:768px) {
+     h1{
+        font-size: 40px;
+    }
+    .landing .text p{
+        font-size: 23px;
+    }
+}
+@media (min-width:992px){
+    .landing .container{
+        flex-direction: row;
+        text-align: start;
+
+    }
+    .landing .text{
+        flex-basis: 40%;
+        flex-grow: 1;
+    }
+    .landing .image{
+        display: block;
+        flex-basis: 600px;
+        flex-grow: 1;
+    }
+    .landing .image img{
+        max-width: 100%;
+        position: relative;
+        animation-name: up_and_down;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 3s;
+    }
+    h1{
+        font-size: 40px !important;
+    }
+
+
+    @keyframes up_and_down {
+        0%{
+          
+          transform: translateY(0);
+        }
+        50% {
+          
+          transform: translateY(30px);
+        }
+        100%{
+            transform: translateY(0);
+        }
+    }
+   
+}
+
+/* landong section end */
