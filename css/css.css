@@ -561,6 +561,7 @@ header .navigation .mega-menu .image {
 }
 .features-box .image{
     position: relative;
+    overflow: hidden;
 }
 .features-box .image::before{
     position: absolute;
@@ -651,9 +652,58 @@ header .navigation .mega-menu .image {
     max-width: 100%;
     
 }
-
-
 /* features section end */
+
+/* testimonials section start */
+.testimonials{
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--section-background);
+}
+.testimonials .container{
+display: grid;
+grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+gap: 40px;
+}
+
+.testimonials .container .box{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 20%);
+    position: relative;
+}
+.testimonials .container .box h3{
+    margin: 0 0 10px;
+}
+.testimonials .container .box .title{
+    color: #777;
+    margin: 0 0 10px;
+}
+.testimonials .container .box .description{
+    line-height: 1.5;
+    color: #777;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.box .stars .fas{
+    color: #FFC107;
+}
+.box img{
+    aspect-ratio: 1 / 1;
+    height: 100px;
+    position: absolute;
+    right: -10px;
+    top: -50px;
+    border-radius: 50%;
+    border: 10px solid var(--section-background);
+}
+
+
+/* testimonials section end */
+
+
+
 /* animations start */
 @keyframes left-move {
     50% {
