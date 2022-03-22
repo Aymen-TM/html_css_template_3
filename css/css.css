@@ -160,6 +160,7 @@ header .navigation .mega-menu .image {
     text-transform: uppercase;
     padding: 10px 20px;
     margin: 0 auto 80px;
+    max-width: 100%;
     width: fit-content;
     border: 2px solid black;
     font-size: 30px;
@@ -829,8 +830,9 @@ header .navigation .mega-menu .image {
 .services .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 40px;
+    gap:40px;
 }
+
 
 .service-box {
     counter-increment: services;
@@ -849,8 +851,9 @@ header .navigation .mega-menu .image {
     background-color: var(--main-color);
     transition: var(--main-transition);
 }
-.service-box .service i{
-    color:#ddd;
+
+.service-box .service i {
+    color: #ddd;
 }
 
 .service-box:hover::before {
@@ -913,6 +916,137 @@ header .navigation .mega-menu .image {
 }
 
 /* services section end */
+
+
+/* our skills section start */
+.our-skills {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+}
+
+.our-skills .container {
+    display: flex;
+}
+
+.our-skills .container>* {
+    flex: 1 1 50%
+}
+
+.skills .skill h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills .skill h3 span {
+    font-size: 12px;
+    border: 1px solid #ccc;
+    padding: 3px 5px;
+    border-radius: 4px;
+    color: var(--main-color);
+}
+
+.skills .skill .the-progress {
+
+    height: 30px;
+    background-color:#eeeeeeed;
+    position: relative;
+}
+
+.skills .skill .the-progress span {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 80%;
+    background-color: var(--main-color);
+}
+
+@media (max-width:768px) {
+    .our-skills .container {
+        flex-direction: column;
+    }
+    .our-skills .container .image {
+        display: none;
+    }
+
+}
+/* our skills section end */
+
+/* how-it-works section start */
+.how-it-works{
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--section-background);
+    max-width: 100%;
+}
+.how-it-works .container{
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    place-items: center;
+    gap: 40px;
+}
+@media (max-width:768px) {
+    .how-it-works .container{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .how-it-works .container .steps .step{
+        flex-direction: column;
+        text-align: center;
+    }
+    .how-it-works .container .image img{
+        display: none;
+    }
+}
+
+.how-it-works .container .steps .step{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #f6f5f5;
+    border: 2px solid white;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    position: relative;
+}
+.how-it-works .container .steps .step::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 0;
+    height: 0;
+    transition: var(--main-transition);
+    background-color: rgba(104,55,147, 0.2);
+}
+.how-it-works .container .steps .step:hover::before{
+    height: 100%;
+    width: 100%;
+}
+.steps .step .step-info p{
+    color: #777;
+    line-height: 1.7;
+    margin: 10px 0 0;
+    font-size: 18px;
+}
+.steps .step .step-info h3{
+    margin: 0;
+    font-size: 22px;
+}
+.how-it-works .container .steps .step img{
+    aspect-ratio:  1 / 1;
+    height: 60px;
+    margin-right: 20px;
+  
+}
+/* how-it-works section end */
+
 
 /* animations start */
 @keyframes left-move {
