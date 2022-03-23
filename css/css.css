@@ -61,6 +61,24 @@ ul {
     }
 }
 
+.dots {
+    background-image: url("../images/dots.png");
+    height: 186px;
+    width: 204px;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.dots-up {
+    top: 200px;
+    right: 0;
+}
+
+.dots-down {
+    bottom: 200px;
+    left: 0;
+}
+
 /* navigation bar (header) */
 header {
     background-color: white;
@@ -830,7 +848,7 @@ header .navigation .mega-menu .image {
 .services .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap:40px;
+    gap: 40px;
 }
 
 
@@ -949,7 +967,7 @@ header .navigation .mega-menu .image {
 .skills .skill .the-progress {
 
     height: 30px;
-    background-color:#eeeeeeed;
+    background-color: #eeeeeeed;
     position: relative;
 }
 
@@ -967,43 +985,49 @@ header .navigation .mega-menu .image {
     .our-skills .container {
         flex-direction: column;
     }
+
     .our-skills .container .image {
         display: none;
     }
 
 }
+
 /* our skills section end */
 
 /* how-it-works section start */
-.how-it-works{
+.how-it-works {
     padding-top: var(--main-padding-top);
     padding-bottom: var(--main-padding-bottom);
     background-color: var(--section-background);
     max-width: 100%;
 }
-.how-it-works .container{
+
+.how-it-works .container {
     max-width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     place-items: center;
     gap: 40px;
 }
+
 @media (max-width:768px) {
-    .how-it-works .container{
+    .how-it-works .container {
         display: flex;
         flex-direction: column;
-        
+
     }
-    .how-it-works .container .steps .step{
+
+    .how-it-works .container .steps .step {
         flex-direction: column;
         text-align: center;
     }
-    .how-it-works .container .image img{
+
+    .how-it-works .container .image img {
         display: none;
     }
 }
 
-.how-it-works .container .steps .step{
+.how-it-works .container .steps .step {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1014,38 +1038,293 @@ header .navigation .mega-menu .image {
     border-radius: 6px;
     position: relative;
 }
-.how-it-works .container .steps .step::before{
+
+.how-it-works .container .steps .step::before {
     content: "";
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 0;
     height: 0;
     transition: var(--main-transition);
-    background-color: rgba(104,55,147, 0.2);
+    background-color: rgba(104, 55, 147, 0.2);
 }
-.how-it-works .container .steps .step:hover::before{
+
+.how-it-works .container .steps .step:hover::before {
     height: 100%;
     width: 100%;
 }
-.steps .step .step-info p{
+
+.steps .step .step-info p {
     color: #777;
     line-height: 1.7;
     margin: 10px 0 0;
     font-size: 18px;
 }
-.steps .step .step-info h3{
+
+.steps .step .step-info h3 {
     margin: 0;
     font-size: 22px;
 }
-.how-it-works .container .steps .step img{
-    aspect-ratio:  1 / 1;
+
+.how-it-works .container .steps .step img {
+    aspect-ratio: 1 / 1;
     height: 60px;
     margin-right: 20px;
-  
+
 }
+
 /* how-it-works section end */
+
+
+
+/* latest events section start */
+.latest-events {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: white;
+    position: relative;
+}
+
+.latest-events .container .latest-event-section1 {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.latest-events .container .image img {
+    max-width: 450px;
+}
+
+.latest-events .container>* {
+    flex: 1 1 50%;
+}
+
+.countdown {
+    display: flex;
+    gap: 10px;
+    text-align: center;
+}
+
+.countdown>* {
+    border: 1px solid #d4d4d4;
+    border-radius: 7px;
+}
+
+.countdown>div h3 {
+    margin: 0;
+    padding: 20px 30px 0;
+    font-size: 35px;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.countdown>div p {
+    padding-top: 10px;
+    border-top: 1px solid #d4d4d4;
+
+}
+
+.latest-events .container .events-info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.latest-events .container .events-info h2 {
+    margin: 40px 0 0;
+    font-size: 30px;
+}
+
+.latest-events .container .events-info .description {
+
+    line-height: 1.7;
+    font-size: 19px;
+    color: #777;
+}
+
+.subscribe {
+    max-width: 100%;
+    margin-top: 50px;
+}
+
+.subscribe form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 30px 40px;
+    background-color: #f6f5f5;
+    border-radius: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+.subscribe form input {
+    outline: none;
+    border: none;
+    padding: 20px;
+    border-radius: 50px;
+    flex: 1;
+    caret-color: var(--main-color);
+
+}
+
+.subscribe form a {
+    max-width: 100%;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    transition: var(--main-transition);
+    text-align: center;
+}
+
+@media (max-width:768px) {
+    .subscribe form {
+        flex-direction: column;
+        border-radius: 0;
+    }
+
+    .subscribe form input {
+        border-radius: 0;
+    }
+
+    .subscribe form a {
+        border-radius: 0;
+    }
+
+    .countdown>div h3 {
+        padding: 10px 20px 0;
+    }
+
+}
+
+@media (max-width:992px) {
+    .latest-events .container .image {
+        display: none;
+    }
+}
+
+
+/* latest events section end */
+
+/* pricing plans section start  */
+.pricing-plans {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--section-background);
+}
+
+.pricing-plans .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.pricing-plans .container .plan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 12px 10px rgba(0, 0, 0, 20%);
+
+}
+
+.plan h2 {
+    font-weight: bold;
+    margin: 30px  0;
+    font-size: 25px;
+    letter-spacing: -1px;
+}
+.plan p{
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--main-color);
+    
+}
+.plan span{
+    color: #777;
+}
+
+.plan img {
+    aspect-ratio: 1 / 1;
+    height: 80px;
+}
+.offres{
+    width: 100%;
+    margin-top: 10px;
+}
+.offres li{
+    padding: 25px 20px;
+    
+}
+.offres li:not(:last-child){
+    border: 1px solid #eee;
+}
+.offres li i{
+    margin-right: 5px;
+    color: var(--main-color);
+}
+
+.plan{
+    position: relative;
+    max-width: 100%;
+}
+
+.plan a{
+    display: block;
+    width: fit-content;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    margin: 30px auto 40px;
+    padding: 15px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: var(--main-transition);
+    z-index: 2;
+}
+.plan a:hover{
+    background-color: var(--main-color);
+    color: white;
+    
+}
+
+.plan::before{
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.1);
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 40%;
+    transition: var(--main-transition);
+}
+.plan:hover::before , .plan:hover::after{
+    width: 100%;
+}
+
+.plan::after{
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.1);
+    top: 40%;
+    right: 0;
+    width: 0;
+    height: 60%;
+    transition: var(--main-transition);
+}
+
+/* pricing plans section end  */
 
 
 /* animations start */
