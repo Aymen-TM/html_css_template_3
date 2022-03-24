@@ -141,7 +141,7 @@ header .navigation {
     z-index: -1;
 }
 
-.other_links:focus+.mega-menu {
+.mega-menu_clicked {
     z-index: 1;
     opacity: 1;
     top: calc(100% + 1px);

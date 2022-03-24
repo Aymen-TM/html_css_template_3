@@ -1,3 +1,38 @@
+/* mega menu click event */
+
+let other_links = document.querySelector(".other_links")
+let links = document.querySelectorAll(".nav_link")
+let mega_menu = document.querySelector(".mega-menu")
+let open = false
+other_links.addEventListener('click', function (e) {
+    e.preventDefault()
+    open = !open
+    console.log(links);
+    if(open){
+        mega_menu.classList.add("mega-menu_clicked");
+    }else{
+        mega_menu.classList.remove("mega-menu_clicked");
+    }  
+})
+
+window.addEventListener('mouseup', function(e) {
+    if (e.target != document.querySelector(".mega_menu")) {
+        open = false
+        mega_menu.classList.remove("mega-menu_clicked");
+    }
+});
+
+
+links.forEach(link =>{
+    link.addEventListener('click',function (e){
+        open = false
+        mega_menu.classList.remove("mega-menu_clicked");
+       
+    })
+})
+
+
+
 /* CountDown Time from the moment to the next year */
 
 let nextYear = new Date("Dec 31,2022 23:59:59").getTime()
