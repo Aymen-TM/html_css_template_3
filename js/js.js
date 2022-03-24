@@ -16,6 +16,7 @@ other_links.addEventListener('click', function (e) {
 })
 
 window.addEventListener('mouseup', function(e) {
+    e.preventDefault()
     if (e.target != document.querySelector(".mega_menu")) {
         open = false
         mega_menu.classList.remove("mega-menu_clicked");
